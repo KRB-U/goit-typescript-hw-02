@@ -88,6 +88,7 @@ const users: User[] = [
 let res = getUserNames(users);
 console.log(res);
 
+// 2
 type AllType = {
   name: string;
   position: number;
@@ -125,3 +126,64 @@ console.log(
     }
   )
 );
+
+// const target = { a: 1, b: 2 };
+// const source = { b: 4, c: 5 };
+
+// const returnedTarget = Object.assign(target, source);
+// console.log(returnedTarget);
+
+// 3
+function merge<T, K>(objA: T, objB: K): T & K {
+  return { ...objA, ...objB };
+}
+
+console.log(merge({ a: 1, b: 2 }, { b: 4, c: 5 }));
+
+// 4
+
+interface Props {
+  title: string;
+}
+
+class Component<T extends Props> {
+  constructor(public props: T) {}
+}
+
+class Page extends Component<Props> {
+  pageInfo() {
+    console.log(this.props.title);
+  }
+}
+
+// 5
+
+interface KeyValuePair<Key, Value> {
+  key: Key;
+  value: Value;
+}
+
+const pairKeyValue: KeyValuePair<string, number> = {
+  key: "mango",
+  value: 22,
+};
+
+console.log(pairKeyValue);
+
+// 7
+export enum UserRole {
+  admin = "admin",
+  editor = "editor",
+  guest = "guest",
+}
+
+// Замініть наступний код на версію за допомогою Record
+type RoleDescr = Record<UserRole, string>;
+
+const RoleDescription: RoleDescr = {
+  [UserRole.admin]: "Admin User",
+  [UserRole.editor]: "Editor User",
+  [UserRole.guest]: "Guest User",
+};
+
+console.log(RoleDescription);

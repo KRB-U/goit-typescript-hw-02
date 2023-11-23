@@ -1,4 +1,3 @@
-"use strict";
 function isWeekendNow(day) {
     const IsDayOff = {
         Sat: true,
@@ -70,4 +69,41 @@ console.log(compare({
     color: "Black",
     weight: 1600,
 }));
+// const target = { a: 1, b: 2 };
+// const source = { b: 4, c: 5 };
+// const returnedTarget = Object.assign(target, source);
+// console.log(returnedTarget);
+// 3
+function merge(objA, objB) {
+    return { ...objA, ...objB };
+}
+console.log(merge({ a: 1, b: 2 }, { b: 4, c: 5 }));
+class Component {
+    constructor(props) {
+        this.props = props;
+    }
+}
+class Page extends Component {
+    pageInfo() {
+        console.log(this.props.title);
+    }
+}
+const pairKeyValue = {
+    key: "mango",
+    value: 22,
+};
+console.log(pairKeyValue);
+// 7
+export var UserRole;
+(function (UserRole) {
+    UserRole["admin"] = "admin";
+    UserRole["editor"] = "editor";
+    UserRole["guest"] = "guest";
+})(UserRole || (UserRole = {}));
+const RoleDescription = {
+    [UserRole.admin]: "Admin User",
+    [UserRole.editor]: "Editor User",
+    [UserRole.guest]: "Guest User",
+};
+console.log(RoleDescription);
 //# sourceMappingURL=index.js.map
