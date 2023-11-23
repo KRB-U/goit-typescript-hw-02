@@ -3,14 +3,13 @@
 */
 
 class Component {
-  constructor (public props:T) {
-
-  }
+  // constructor (public props:T) {
+  // }
 }
 
 class Page extends Component {
-  pageInfo () {
-    console.log(this.props.title);
+  pageInfo() {
+    // console.log(this.props.title);
   }
 }
 
