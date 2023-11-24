@@ -312,10 +312,41 @@ console.log(RoleDescription);
 //   age: number;
 // };
 // merged.name;
-function merge(objA, objB) {
-    // return { ...objA, ...objB };
-    return Object.assign({}, objA, objB);
+// function merge<T, U>(objA: T, objB: U) {
+//   // return { ...objA, ...objB };
+//   return Object.assign({}, objA, objB);
+// }
+// const merged = merge({ name: "Alisa" }, { age: 28 });
+// console.log(merged);
+// type PersonName = {
+//   name: string;
+// };
+// type PersonAge = {
+//   age: number;
+// };
+// function merge<PersonName, PersonAge>(objA: PersonName, objB: PersonAge) {
+//   return { ...objA, ...objB };
+// }
+// const merged = merge<PersonName, PersonAge>({ name: "Alisa" }, { age: 28 });
+// console.log(merged);
+// type Person = {
+//   name: string;
+//   age: number;
+//   location: string;
+// };
+// type PersonKeys = keyof Person; // 'name' | 'age' | 'location'
+// function getPersonInfo(person: Person, key: PersonKeys) {
+//   return person[key];
+// }
+// const john: Person = {
+//   name: "John",
+//   age: 25,
+//   location: "NY",
+// };
+// console.log(getPersonInfo(john, "age")); // 25
+// console.log(getPersonInfo(john, "name")); // 'John'
+// console.log(getPersonInfo(john, "job")); // Error: Argument of type '"job"' is not assignable to parameter of type 'PersonKeys'.
+function getProperty(obj, key) {
+    return obj[key];
 }
-const merged = merge({ name: "Alisa" }, { age: 28 });
-console.log(merged);
 //# sourceMappingURL=index.js.map
