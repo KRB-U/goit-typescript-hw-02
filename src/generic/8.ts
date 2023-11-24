@@ -22,6 +22,6 @@ type Form = {
 type Params = Omit<Form, "errors">;
 
 // METHOD 2
-type Params2 = Pick<Form, "email" | "firstName" | "lastName" | "phone">;
+// type Params2 = Pick<Form, "email" | "firstName" | "lastName" | "phone">;
 
 export {};
