@@ -498,6 +498,7 @@ console.log(RoleDescription);
 // console.log(getPersonInfo(john, "name")); // 'John'
 // console.log(getPersonInfo(john, "job")); // Error: Argument of type '"job"' is not assignable to parameter of type 'PersonKeys'.
 
-function getProperty<T, K>(obj: T, key: string) {
-  return obj[key];
-}
+// keyof
+// function getProperty<T, K extends keyof T>(obj: T, key: K) {
+//   return obj[key];
+// }
