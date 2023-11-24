@@ -134,11 +134,11 @@ console.log(
 // console.log(returnedTarget);
 
 // 3
-function merge<T, K>(objA: T, objB: K): T & K {
-  return { ...objA, ...objB };
-}
+// function merge<T, K>(objA: T, objB: K): T & K {
+//   return { ...objA, ...objB };
+// }
 
-console.log(merge({ a: 1, b: 2 }, { b: 4, c: 5 }));
+// console.log(merge({ a: 1, b: 2 }, { b: 4, c: 5 }));
 
 // 4
 
@@ -430,3 +430,33 @@ console.log(RoleDescription);
 // console.log(result);
 // let result2 = dataView(556);
 // console.log(typeof result2);
+
+// function firtArrElem<T>(arr: T[]): T {
+//   return arr[0];
+// }
+
+// let numbers4 = [1, 2, 3, 4, 5];
+// let firstNum3 = firtArrElem(numbers4);
+// console.log(firstNum3);
+
+// let strings4 = ["a", "b", "c", "d"];
+// let firstStr3 = firtArrElem(strings4);
+// console.log(firstStr3);
+
+// function merge(objA: object, objB: object) {
+//   return Object.assign(objA, objB);
+// }
+
+// const merged = merge({ name: "Alisa" }, { age: 28 }) as {
+//   name: string;
+//   age: number;
+// };
+// merged.name;
+
+function merge<T, U>(objA: T, objB: U) {
+  // return { ...objA, ...objB };
+  return Object.assign({}, objA, objB);
+}
+
+const merged = merge({ name: "Alisa" }, { age: 28 });
+console.log(merged);
