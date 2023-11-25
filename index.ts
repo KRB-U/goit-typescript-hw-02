@@ -763,7 +763,11 @@ class Student implements StudentData {
   ) {}
 
   introduce(): void {
-    console.log(`My name is ${this.name}. My major is ${this.major}`);
+    const studentInfoElement = document.querySelector("#studentInfo");
+
+    if (studentInfoElement instanceof HTMLElement) {
+      studentInfoElement.textContent = `My name is ${this.name}. My major is ${this.major}.`;
+    }
   }
 }
 

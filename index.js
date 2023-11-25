@@ -136,7 +136,10 @@ class Student {
         this.major = major;
     }
     introduce() {
-        console.log(`My name is ${this.name}. My major is ${this.major}`);
+        const studentInfoElement = document.querySelector("#studentInfo");
+        if (studentInfoElement instanceof HTMLElement) {
+            studentInfoElement.textContent = `My name is ${this.name}. My major is ${this.major}.`;
+        }
     }
 }
 const student = new Student("Mango", 22333, "Computer Science");
